@@ -60,7 +60,7 @@ function displayImage(imageArray: ImageProps[]): void {
     container.className =
       " img_container flex flex-col gap-2 border-2 border-gray-100 rounded-[20px] p-1 hover:shadow-xl hover:border-gray-400 hover:scale-[1.01] group transition-all duration-300 ease-in-out cursor-pointer";
     container.innerHTML = `
-          <img src="${image.download_url}" alt="${image.author}" class=" rounded-2xl aspect-square object-cover" />
+          <img src="${image.download_url}" alt="${image.author}" class=" rounded-2xl aspect-square object-cover" loading="lazy" />
           <div class="flex flex-row justify-between items-center px-2 py-1">
             <p class="text-base font-mono font-light">${image.author}</p>
             <span class="w-10 h-10  border border-gray-300 group-hover:border-gray-500 hover:rotate-45 transition-all ease-in-out cursor-pointer rounded-full text-2xl font-bold p-2">
