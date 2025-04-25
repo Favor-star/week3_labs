@@ -39,6 +39,9 @@ function handleClick(event: MouseEvent): void {
   if (target.classList.contains("nextImg")) {
     handleNextButtonClick(activeImage as string);
   }
+  if (target.classList.contains("prevImg")) {
+    handlePreviousButtonClick(activeImage as string);
+  }
 }
 
 async function fetchImage(pageNumber: number): Promise<void> {
@@ -113,7 +116,6 @@ function handlePreviousButtonClick(imageId: string): void {
 
 function init(): void {
   fetchImage(1).then(() => {
-    console.log("Images fetched successfully.");
     const loader = document.getElementById(
       "loading_indicator"
     ) as HTMLDivElement;

@@ -5,13 +5,16 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./src/style.css" rel="stylesheet" />
-    <title>Image gallery</title>
+    <title>Image gallery - Week 3 lab</title>
   </head>
   <body class="relative">
     <header
       class="max-w-screen-lg mx-auto w-full flex flex-row justify-between items-center py-4 px-1 font-mono bg-white text-cyan-500 font-bold sticky top-0 left-0 right-0 z-50"
     >
-      <h1>IMAGE GALLERY</h1>
+      <h1 class="text-3xl font-bold">
+        IMAGE GALLERY
+        <span class="font-normal text-sm">by Favor</span>
+      </h1>
       <nav>
         <button
           class="px-4 py-2 border-2 border-cyan-500 text-cyan-500 rounded-2xl hover:bg-cyan-500 hover:text-white transition-all"
@@ -132,16 +135,17 @@
           <div
             class="w-full flex flex-row flex-wrap gap-5 justify-between items-center mt-10"
           >
-            <span
-              class="flex flex-row gap-2 text-cyan-500 border border-cyan-500 items-center justify-center px-4 py-2 rounded-xl font-mono text-base hover:bg-cyan-500 hover:text-white transition-all"
+            <button
+              class="flex flex-row gap-2 text-cyan-500 border border-cyan-500 disabled:border-cyan-200 disabled:text-cyan-200 items-center justify-center px-4 py-2 rounded-xl font-mono text-base hover:bg-cyan-500 hover:text-white transition-all prevImg"
             >
-              <span class="w-5 h-5 block rotate-180 font-bold">
+              <span class="w-5 h-5 block rotate-180 font-bold prevImg">
                 <svg
                   width="100%"
                   height="100%"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  class="prevImg"
                 >
                   <path
                     d="M4 12H20M20 12L14 6M20 12L14 18"
@@ -149,21 +153,23 @@
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
+                    class="prevImg"
                   />
                 </svg> </span
               >Prev
-            </span>
-            <span
+            </button>
+            <button
               class="flex flex-row gap-2 text-cyan-500 border border-cyan-500 items-center justify-center px-4 py-2 rounded-xl font-mono text-base hover:bg-cyan-500 hover:text-white transition-all nextImg"
-              >Next
-              <span class="w-5 h-5 block font-bold nextImg">
+            >
+              Next
+              <span class="w-5 h-5 block font-bold prevImg">
                 <svg
                   width="100%"
                   height="100%"
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  class="nextImg"
+                  class="prevImg"
                 >
                   <path
                     d="M4 12H20M20 12L14 6M20 12L14 18"
@@ -171,11 +177,11 @@
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    class="nextImg"
+                    class="prevImg"
                   />
                 </svg>
               </span>
-            </span>
+            </button>
           </div>
         </div>
       </div>
